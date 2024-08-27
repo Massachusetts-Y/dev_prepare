@@ -1,0 +1,11 @@
+[Unit]
+Description=Prepare android dev loop service
+After=arm-agent.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/android_dev_prepare_loop.sh
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
