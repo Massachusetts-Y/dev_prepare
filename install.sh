@@ -38,8 +38,13 @@ install_for_android(){
 
 
 install_for_linux
-if [ -f "/userdata/arm-agent/bin/manage-shell/sh/add_volume.sh" ]; then
-    install_for_android
-else
-    echo Error: Please check you manage-shell verison, it must be greater than 1.0.7
+
+
+if [ ! -f "/userdata/arm-agent/bin/manage-shell/sh/add_volume.sh" ]; then
+    echo Warning: Please check you manage-shell verison, it must be greater than 1.0.7
+    echo Now automatically patch
+    rsync ./add_volume.sh /userdata/arm-agent/bin/manage-shell/sh/
+    rsync ./yq /userdata/arm-agent/bin/manage-shell/utils/
 fi
+
+install_for_android
