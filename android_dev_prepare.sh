@@ -11,7 +11,7 @@ prepare_block(){
     if mount | grep -q /sys/dev/block; then
         return 0;
     fi
-    rm -rf /data/local/tmp/char
+    rm -rf /data/local/tmp/block
 
     mkdir -p /data/local/tmp/block
     mount -o bind /data/local/tmp/block /sys/dev/block
