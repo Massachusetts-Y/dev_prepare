@@ -24,7 +24,7 @@ install_for_android(){
         # 移动脚本和rc文件
         if [ -d $MANAGE_SEHLL_DIR/mount/$id ]; then
             rsync ./dev_prepare.rc $MANAGE_SEHLL_DIR/mount/$id/system/etc/init/
-            rsync ./android_dev_prepare.sh $MANAGE_SEHLL_DIR/mount/$id/system/xbin/
+            rsync ./dev_prepare.sh $MANAGE_SEHLL_DIR/mount/$id/system/xbin/
         fi
         # 将volums添加到docker-compose.yml
         local local_rc_dir="./mount/$id/system/etc/init/dev_prepare.rc"
