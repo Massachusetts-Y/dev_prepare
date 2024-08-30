@@ -1,10 +1,14 @@
-rm -rf /dev/nvme0*
-rm -rf /dev/mapper
-rm -rf /dev/mtd*
-rm -rf /dev/tee*
 rm -rf /dev/block
+rm -rf /dev/gpio*
+rm -rf /dev/mapper
 rm -rf /dev/media*
+rm -rf /dev/mtd*
+rm -rf /dev/nvme0*
+rm -rf /dev/tee*
+rm -rf /dev/tty*
+rm -rf /dev/vendor_storage
 rm -rf /dev/watchdog*
+
 
 
 prepare_block(){
